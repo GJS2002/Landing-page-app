@@ -1,1 +1,6 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond|Paytone+One&display=swap");
+body {
+  height: 100%;
+  background: linear-gradient(45deg, #BA5370, #F4E2D8);
+}
+/*# sourceMappingURL=main.css.map */
