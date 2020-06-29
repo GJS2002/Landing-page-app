@@ -4,7 +4,7 @@ $colors: (
      gradient:  linear-gradient(45deg, #BA5370,  #F4E2D8),
      primary: #BA5370,
      secondary: #F4E2D8,
-     primary-d: darken(#BA5370, 30%)
+     primary-d: darken(#BA5370, 5%),
 );
 
 $ff-primary: 'Paytone One', sans-serif;
@@ -23,8 +23,9 @@ $transition: all .3s linear;
 }
 
 body, html{
-     height: 100%;
+     height: max-content;
      background: colors(gradient);
+     z-index: 1;
 }
 
 nav{
@@ -33,10 +34,12 @@ nav{
      font-family: $ff-primary;
      color: colors(secondary);
      width: 100%;
-     
+     height: 20%;
+     z-index: 10;
+
      background: rgb(48, 48, 48);
      h1{
-          font-size: 2em;
+          font-size: 2.1em;
           margin: .5em 0 .5em 0;
           width: 100%;
 
@@ -50,18 +53,20 @@ nav{
           display: flex;
           width: 100%;
           justify-content: space-around;
+
           li{
                text-align: center;
                margin-bottom: 1em;
+
                a{
                     color: colors(secondary);
                     text-decoration: none;
                     transition: $transition;
                     padding: .3em;
                     border-radius: 1em;
-                    font-size: .8em;
+                    font-size: 1em;
                     border: 2px solid colors(secondary);
-                    &:hover{
+                    &:focus, &:hover{
                          background: colors(primary);
                          color: colors(secondary);
                     }
@@ -71,26 +76,103 @@ nav{
 }
 
 main{
+
      padding: 1em;
      display: flex;
+     flex-direction: column;
+     font-family: $ff-primary;
+     padding-bottom: 25vh;
      header{
+
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
+
           h1{
                padding: 1em;
                text-align: center;
                color: black;
-               font-family: $ff-primary;
                width: 80% auto;
+               font-size: 1.7em;
           }
+
           img{
                width: 100%;
                align-self: center;
           }
      }
 
-     
+     article{
+          margin-top: 2em;
+          padding: 1em;
+          background: rgba(black, .1);
+          h1{
+               text-align: center;
+               font-size: 1.7em;
+               margin-bottom: .5em;
+               
 
+          }
+
+          p{
+               text-align: center;
+               font-size: .85em;
+               line-height: 1.9em;
+               color: rgb(48, 48, 48);
+               font-family: $ff-secondary;
+               font-weight: bold;
+          }
+
+          img{
+               position: relative;
+               width: 100%;
+               margin: 1em;
+               
+          }
+
+     }
+     
+     footer{
+          margin-top: 2em;
+          padding: 1em;
+          text-align: center;
+          position: relative;
+          z-index: 5;
+          background: rgba(black, .1);
+          
+          ul{
+               margin-bottom: .5em;
+               opacity: 100%; 
+               h1{
+                    font-size: 1.7em;
+               }
+          }
+
+          span{
+               text-decoration: underline;
+               color: darken(colors(primary), 30%);
+               opacity: 100%;
+          }
+
+          p{
+               text-align: center;
+               font-size: .85em;
+               line-height: 1.9em;
+               color: rgb(43, 43, 43);
+               font-family: $ff-secondary;
+               font-weight: bold;
+               opacity: 100%;
+          }
+
+          img{
+               position: relative;
+               width: 100%;
+               margin: 1em;
+               
+          }
+
+          
+     }
 }
+
