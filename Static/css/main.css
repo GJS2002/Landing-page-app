@@ -11,9 +11,63 @@ body, html {
 }
 
 nav {
-  padding: 1em;
+  position: fixed;
+  bottom: 0;
   font-family: "Paytone One", sans-serif;
-  color: black;
+  color: #F4E2D8;
+  width: 100%;
+  background: #303030;
+}
+
+nav h1 {
+  font-size: 2em;
+  margin: .5em 0 .5em 0;
+  width: 100%;
+}
+
+nav h1 p {
+  margin: .5em;
+  text-align: center;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav ul li {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+nav ul li a {
+  color: #F4E2D8;
+  text-decoration: none;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  padding: .3em;
+  border-radius: 1em;
+  font-size: .8em;
+  border: 2px solid #F4E2D8;
+}
+
+nav ul li a:hover {
+  background: #BA5370;
+  color: #F4E2D8;
+}
+
+main {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,48 +75,12 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #BA5370;
-}
-
-nav h1 {
-  font-size: 2em;
-  margin: .3em;
-}
-
-nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-nav ul li {
-  text-align: center;
-  margin: 1em;
-}
-
-nav ul li a {
-  color: black;
-  text-decoration: none;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  padding: .3em;
-  border-radius: 1em;
-  border: 2px solid #53212f;
-}
-
-nav ul li a:hover {
-  background: #53212f;
-  color: #F4E2D8;
-}
-
-main {
-  padding: 1em;
 }
 
 main header h1 {
@@ -71,5 +89,12 @@ main header h1 {
   color: black;
   font-family: "Paytone One", sans-serif;
   width: 80% auto;
+}
+
+main header img {
+  width: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 /*# sourceMappingURL=main.css.map */

@@ -28,36 +28,41 @@ body, html{
 }
 
 nav{
-     padding: 1em;
+     position: fixed;
+     bottom: 0;
      font-family: $ff-primary;
-     color: black;
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
-     align-items: center;
-     background: colors(primary);
-
+     color: colors(secondary);
+     width: 100%;
+     
+     background: rgb(48, 48, 48);
      h1{
           font-size: 2em;
-          margin: .3em;
+          margin: .5em 0 .5em 0;
+          width: 100%;
+
+          p{
+               margin: .5em;
+               text-align: center;
+          }
      }
 
      ul{
           display: flex;
-
+          width: 100%;
+          justify-content: space-around;
           li{
                text-align: center;
-               margin: 1em;
-
+               margin-bottom: 1em;
                a{
-                    color: black;
+                    color: colors(secondary);
                     text-decoration: none;
                     transition: $transition;
                     padding: .3em;
                     border-radius: 1em;
-                    border: 2px solid colors(primary-d);
+                    font-size: .8em;
+                    border: 2px solid colors(secondary);
                     &:hover{
-                         background: colors(primary-d);
+                         background: colors(primary);
                          color: colors(secondary);
                     }
                }
@@ -67,7 +72,12 @@ nav{
 
 main{
      padding: 1em;
+     display: flex;
      header{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
           h1{
                padding: 1em;
                text-align: center;
@@ -75,5 +85,12 @@ main{
                font-family: $ff-primary;
                width: 80% auto;
           }
+          img{
+               width: 100%;
+               align-self: center;
+          }
      }
+
+     
+
 }
