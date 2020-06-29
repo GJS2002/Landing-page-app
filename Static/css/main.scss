@@ -1,10 +1,79 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond|Paytone+One&display=swap');
 
-$gradient: linear-gradient(45deg, #BA5370,  #F4E2D8);
-$ff-primary:'Paytone One', sans-serif;
-$ff-secondary:'Cutive Mono', monospace ;  
+$colors: (    
+     gradient:  linear-gradient(45deg, #BA5370,  #F4E2D8),
+     primary: #BA5370,
+     secondary: #F4E2D8,
+     primary-d: darken(#BA5370, 30%)
+);
 
-body{
+$ff-primary: 'Paytone One', sans-serif;
+$ff-secondary: 'Cutive Mono', monospace;
+$transition: all .3s linear;
+
+@function colors($name){
+    @return map-get($colors, $name);
+}
+
+
+*{
+     margin: 0;
+     padding: 0;
+     list-style: none;
+}
+
+body, html{
      height: 100%;
-     background: $gradient;
+     background: colors(gradient);
+}
+
+nav{
+     padding: 1em;
+     font-family: $ff-primary;
+     color: black;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+     background: colors(primary);
+
+     h1{
+          font-size: 2em;
+          margin: .3em;
+     }
+
+     ul{
+          display: flex;
+
+          li{
+               text-align: center;
+               margin: 1em;
+
+               a{
+                    color: black;
+                    text-decoration: none;
+                    transition: $transition;
+                    padding: .3em;
+                    border-radius: 1em;
+                    border: 2px solid colors(primary-d);
+                    &:hover{
+                         background: colors(primary-d);
+                         color: colors(secondary);
+                    }
+               }
+          }
+     }
+}
+
+main{
+     padding: 1em;
+     header{
+          h1{
+               padding: 1em;
+               text-align: center;
+               color: black;
+               font-family: $ff-primary;
+               width: 80% auto;
+          }
+     }
 }

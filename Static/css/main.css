@@ -1,6 +1,75 @@
 @import url("https://fonts.googleapis.com/css?family=EB+Garamond|Paytone+One&display=swap");
-body {
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body, html {
   height: 100%;
   background: linear-gradient(45deg, #BA5370, #F4E2D8);
+}
+
+nav {
+  padding: 1em;
+  font-family: "Paytone One", sans-serif;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #BA5370;
+}
+
+nav h1 {
+  font-size: 2em;
+  margin: .3em;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav ul li {
+  text-align: center;
+  margin: 1em;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  padding: .3em;
+  border-radius: 1em;
+  border: 2px solid #53212f;
+}
+
+nav ul li a:hover {
+  background: #53212f;
+  color: #F4E2D8;
+}
+
+main {
+  padding: 1em;
+}
+
+main header h1 {
+  padding: 1em;
+  text-align: center;
+  color: black;
+  font-family: "Paytone One", sans-serif;
+  width: 80% auto;
 }
 /*# sourceMappingURL=main.css.map */
