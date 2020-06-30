@@ -10,11 +10,17 @@ $colors: (
 $ff-primary: 'Paytone One', sans-serif;
 $ff-secondary: 'Cutive Mono', monospace;
 $transition: all .3s linear;
+$mobileSide: 500px;
 
 @function colors($name){
     @return map-get($colors, $name);
 }
 
+@mixin mobileSide {
+     @media (min-width: #{$mobileSide}){
+          @content;
+     }
+}
 
 *{
      margin: 0;
@@ -36,6 +42,11 @@ body, html{
      color: rgb(43, 43, 43);
      font-family: $ff-secondary;
      font-weight: bold;
+     grid-row: 2/3;
+     grid-column: 1/3;
+     @include mobileSide {
+          font-size: 1em;
+     }
 }
 
 .btn{
@@ -61,6 +72,62 @@ body, html{
      margin: 1.5em 0 1.5em 0;
      background: colors(primary);
      color: colors(secondary);
+     
+     &:focus, &:hover{
+          background: colors(secondary);
+          color: colors(primary);
+          border-color: colors(primary);
+          cursor: pointer;
+     }
+}
+
+.Copyright{
+     display: flex;
+     padding: 1em;
+     color: colors(secondary);
+     flex-direction: column;
+     text-align: center;
+     margin-top: 1.5em;
+     justify-content: space-between;
+     font-family: $ff-secondary;
+
+     @include mobileSide {
+          flex-direction: row;
+          font-size: 1.6em;
+     }
+
+     p{
+          margin: .5em;
+          font-size: .9em;
+          
+     }
+}
+
+.heading, .heading2{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     grid-column: 1/3;
+     h1{
+          text-align: center;
+          font-size: 2em;
+          @include mobileSide{
+               font-size: 2.5em;
+          }
+          
+     }
+}
+
+.heading2{
+     grid-row: 1/3;
+}
+
+article, footer{
+     margin-top: 2em;
+     padding: 1em;
+     background: rgba(black, .1);
+     display: flex;
+     flex-direction: column;
 }
 
 nav{
@@ -69,18 +136,36 @@ nav{
      font-family: $ff-primary;
      color: colors(secondary);
      width: 100%;
-     height: 20%;
+     height: 19vh;
      z-index: 10;
-
      background: rgb(48, 48, 48);
+
+     @include mobileSide {
+          top: 0;
+          display: flex;
+     }
+
      h1{
-          font-size: 2.1em;
+          font-size: 2em;
           margin: .5em 0 .5em 0;
           width: 100%;
+
+          @include mobileSide {
+               width: 100%;
+               margin: 0;
+               font-size: 1.5em;
+               display: flex;
+               justify-content: space-around;
+               align-items: center;
+          }
 
           p{
                margin: .5em;
                text-align: center;
+               @include mobileSide {
+                    
+                    margin: 0;
+               }
           }
      }
 
@@ -88,10 +173,11 @@ nav{
           display: flex;
           width: 100%;
           justify-content: space-around;
+          align-items: center;
 
           li{
                text-align: center;
-               margin-bottom: 1em;
+               
           }
      }
 }
@@ -104,21 +190,9 @@ main{
      font-family: $ff-primary;
      padding-bottom: 25vh;
 
-     div{
-          display: flex;
-          padding: 1em;
-          color: colors(secondary);
-          flex-direction: column;
-          text-align: center;
-          margin-top: 1.5em;
-          justify-content: space-between;
-          font-family: $ff-secondary;
-          p{
-               margin: .5em;
-          }
+     @include mobileSide {
+          padding-bottom: 0;
      }
-
-
 
      header{
 
@@ -127,26 +201,40 @@ main{
           justify-content: center;
           align-items: center;
 
+          @include mobileSide{
+               margin-top: 20vh;
+               flex-direction: row;
+          }
+
           h1{
                padding: 1em;
                text-align: center;
                color: black;
                width: 80% auto;
                font-size: 1.7em;
+               @include mobileSide {
+                    font-size: 2em;
+               }
           }
 
           img{
                width: 90%;
                align-self: center;
+               @include mobileSide {
+                    width: 50%;
+               }
           }
      }
 
      article{
-          margin-top: 2em;
-          padding: 1em;
-          background: rgba(black, .1);
-          display: flex;
-          flex-direction: column;
+          
+
+          @include mobileSide {
+               display: grid;
+               grid-template-columns: repeat(3, 1fr);
+               grid-template-rows: 1fr 1fr;
+          }
+
           h1{
                text-align: center;
                font-size: 1.9em;
@@ -154,21 +242,20 @@ main{
           }
 
           img{
-               position: relative;
                width: 90%;
                margin: 1em;
-               
+               @include mobileSide {
+                    height: 90%;
+                    width: 90%;
+                    grid-column: 3/4;
+                    grid-row: 1/3;
+               }
           }
 
      }
      
      footer{
-          margin-top: 2em;
-          padding: 1em;
-          text-align: center;
-          position: relative;
-          z-index: 5;
-          background: rgba(black, .1);
+          
           
           ul{
                margin-bottom: 1em;
