@@ -28,6 +28,30 @@ body, html{
      z-index: 1;
 }
 
+.btn{
+     color: colors(secondary);
+     text-decoration: none;
+     transition: $transition;
+     padding: .3em;
+     border-radius: 1em;
+     font-size: 1em;
+     border: 2px solid colors(secondary);               
+     &:focus, &:hover{
+          background: colors(primary);
+          color: colors(secondary);
+          cursor: pointer;
+     }
+}
+
+.btn-account{
+     width: max-content;
+     align-self: center;
+     border: 2px solid colors(primary);
+     margin: 1.5em 0 1.5em 0;
+     background: colors(primary);
+     color: colors(secondary);
+}
+
 nav{
      position: fixed;
      bottom: 0;
@@ -57,20 +81,6 @@ nav{
           li{
                text-align: center;
                margin-bottom: 1em;
-
-               a{
-                    color: colors(secondary);
-                    text-decoration: none;
-                    transition: $transition;
-                    padding: .3em;
-                    border-radius: 1em;
-                    font-size: 1em;
-                    border: 2px solid colors(secondary);
-                    &:focus, &:hover{
-                         background: colors(primary);
-                         color: colors(secondary);
-                    }
-               }
           }
      }
 }
@@ -82,6 +92,19 @@ main{
      flex-direction: column;
      font-family: $ff-primary;
      padding-bottom: 25vh;
+
+     div{
+          display: flex;
+          padding: 1em;
+          color: colors(secondary);
+          flex-direction: column;
+          text-align: center;
+          margin-top: 1.5em;
+          justify-content: space-between;
+     }
+
+
+
      header{
 
           display: flex;
@@ -98,7 +121,7 @@ main{
           }
 
           img{
-               width: 100%;
+               width: 90%;
                align-self: center;
           }
      }
@@ -107,12 +130,12 @@ main{
           margin-top: 2em;
           padding: 1em;
           background: rgba(black, .1);
+          display: flex;
+          flex-direction: column;
           h1{
                text-align: center;
-               font-size: 1.7em;
+               font-size: 1.9em;
                margin-bottom: .5em;
-               
-
           }
 
           p{
@@ -126,7 +149,7 @@ main{
 
           img{
                position: relative;
-               width: 100%;
+               width: 90%;
                margin: 1em;
                
           }
@@ -167,7 +190,7 @@ main{
 
           img{
                position: relative;
-               width: 100%;
+               width: 90%;
                margin: 1em;
                
           }
