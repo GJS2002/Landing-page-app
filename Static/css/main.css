@@ -13,6 +13,16 @@ body, html {
   z-index: 1;
 }
 
+.text {
+  text-align: center;
+  font-size: .85em;
+  padding: .5em;
+  line-height: 1.9em;
+  color: #2b2b2b;
+  font-family: "Cutive Mono", monospace;
+  font-weight: bold;
+}
+
 .btn {
   color: #F4E2D8;
   text-decoration: none;
@@ -107,6 +117,11 @@ main div {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  font-family: "Cutive Mono", monospace;
+}
+
+main div p {
+  margin: .5em;
 }
 
 main header {
@@ -159,15 +174,6 @@ main article h1 {
   margin-bottom: .5em;
 }
 
-main article p {
-  text-align: center;
-  font-size: .85em;
-  line-height: 1.9em;
-  color: #303030;
-  font-family: "Cutive Mono", monospace;
-  font-weight: bold;
-}
-
 main article img {
   position: relative;
   width: 90%;
@@ -184,7 +190,8 @@ main footer {
 }
 
 main footer ul {
-  margin-bottom: .5em;
+  margin-bottom: 1em;
+  padding: 1em;
   opacity: 100%;
 }
 
@@ -195,16 +202,6 @@ main footer ul h1 {
 main footer span {
   text-decoration: underline;
   color: #53212f;
-  opacity: 100%;
-}
-
-main footer p {
-  text-align: center;
-  font-size: .85em;
-  line-height: 1.9em;
-  color: #2b2b2b;
-  font-family: "Cutive Mono", monospace;
-  font-weight: bold;
   opacity: 100%;
 }
 

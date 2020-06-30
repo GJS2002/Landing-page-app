@@ -28,6 +28,16 @@ body, html{
      z-index: 1;
 }
 
+.text{
+     text-align: center;
+     font-size: .85em;
+     padding: .5em;
+     line-height: 1.9em;
+     color: rgb(43, 43, 43);
+     font-family: $ff-secondary;
+     font-weight: bold;
+}
+
 .btn{
      color: colors(secondary);
      text-decoration: none;
@@ -35,7 +45,8 @@ body, html{
      padding: .3em;
      border-radius: 1em;
      font-size: 1em;
-     border: 2px solid colors(secondary);               
+     border: 2px solid colors(secondary);       
+
      &:focus, &:hover{
           background: colors(primary);
           color: colors(secondary);
@@ -101,6 +112,10 @@ main{
           text-align: center;
           margin-top: 1.5em;
           justify-content: space-between;
+          font-family: $ff-secondary;
+          p{
+               margin: .5em;
+          }
      }
 
 
@@ -138,15 +153,6 @@ main{
                margin-bottom: .5em;
           }
 
-          p{
-               text-align: center;
-               font-size: .85em;
-               line-height: 1.9em;
-               color: rgb(48, 48, 48);
-               font-family: $ff-secondary;
-               font-weight: bold;
-          }
-
           img{
                position: relative;
                width: 90%;
@@ -165,7 +171,8 @@ main{
           background: rgba(black, .1);
           
           ul{
-               margin-bottom: .5em;
+               margin-bottom: 1em;
+               padding: 1em;
                opacity: 100%; 
                h1{
                     font-size: 1.7em;
@@ -175,16 +182,6 @@ main{
           span{
                text-decoration: underline;
                color: darken(colors(primary), 30%);
-               opacity: 100%;
-          }
-
-          p{
-               text-align: center;
-               font-size: .85em;
-               line-height: 1.9em;
-               color: rgb(43, 43, 43);
-               font-family: $ff-secondary;
-               font-weight: bold;
                opacity: 100%;
           }
 
