@@ -359,7 +359,6 @@ main{
           @include mobileSide {
                display: grid;
                grid-template-columns: repeat(3, 1fr);
-               grid-template-rows: 1fr 1fr;
           }
 
           h1{
