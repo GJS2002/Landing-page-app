@@ -71,7 +71,7 @@ body, html{
 
      @include desktop{
           font-size: 1.2em;
-          place-self: center;
+          align-self: center;
           padding: 1em;
           width: 70%;
      }
@@ -175,7 +175,7 @@ body, html{
 
           @include desktop{
                font-size: 3em;
-               place-self: center;
+               align-self: center;
                width: 70%;
           }
           
