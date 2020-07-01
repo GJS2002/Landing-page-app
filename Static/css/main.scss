@@ -12,7 +12,7 @@ $ff-secondary: 'Cutive Mono', monospace;
 $transition: all .3s linear;
 $mobileSide: 500px;
 $desktop: 1000px;
-$fourK: 1600px;
+$desktopBig: 1600px;
 
 @function colors($name){
     @return map-get($colors, $name);
@@ -30,10 +30,17 @@ $fourK: 1600px;
      }
 }
 
+@mixin desktopBig {
+     @media (min-width: #{$desktopBig}){
+          @content;
+     }
+}
+
 *{
      margin: 0;
      padding: 0;
      list-style: none;
+     letter-spacing: 2px;
 }
 
 body, html{
@@ -62,6 +69,10 @@ body, html{
           padding: 1em;
           width: 70%;
      }
+
+     @include desktopBig{
+          font-size: 2.4em;
+     }
 }
 
 .btn{
@@ -82,6 +93,11 @@ body, html{
      @include desktop{
           font-size: 1.3em;
      }
+
+     @include desktopBig{
+          font-size: 3em;
+          align-self: center;
+     }
 }
 
 .btn-account{
@@ -101,6 +117,10 @@ body, html{
 
      @include desktop{
           font-size: 1.5em;
+     }
+
+     @include desktopBig{
+          font-size: 2.4em;
      }
 }
 
@@ -126,7 +146,11 @@ body, html{
      p{
           margin: .5em;
           font-size: .9em;
-          
+     }
+
+     @include desktopBig{
+          font-size: 2.4em;
+          justify-content: space-around;
      }
 }
 
@@ -148,7 +172,17 @@ body, html{
                place-self: center;
                width: 70%;
           }
+          
+          
      }
+          @include desktopBig{
+               h1{
+                    font-size: 5.5em;
+               }
+               
+               justify-content: center;
+          }
+     
 
     
 }
@@ -159,6 +193,9 @@ body, html{
           @include desktop{
                font-size: 3em;
                width: 100%;
+          }
+          @include desktopBig{
+               font-size: 5em;
           }
      }
     
@@ -204,7 +241,9 @@ nav{
           font-size: 2em;
           margin: .5em 0 .5em 0;
           width: 100%;
-
+          display: flex;
+          align-items: center;
+          
           @include mobileSide {
                width: 100%;
                margin: 0;
@@ -214,6 +253,8 @@ nav{
                align-items: center;
           }
 
+          
+
           @include desktop{
                font-size: 3em;
           }
@@ -221,8 +262,12 @@ nav{
           p{
                margin: .5em;
                text-align: center;
+               
                @include mobileSide {
                     margin: 0;
+               }
+               @include desktopBig{
+                    font-size: 2.4em;
                }
           }
      }
@@ -234,8 +279,11 @@ nav{
           align-items: center;
 
           li{
-               text-align: center;
+               @include desktopBig{
+                    margin-top: 1em;
+               }
                
+               text-align: center;
           }
      }
 }
@@ -277,6 +325,11 @@ main{
                @include mobileSide {
                     font-size: 2em;
                }
+
+               @include desktopBig {
+                    font-size: 5em;
+               }
+               
           }
 
           img{
@@ -321,7 +374,7 @@ main{
                @include desktop{
                     padding: 1em;
                     height: 120%;
-                    width: 120%;
+                    width: 100%;
                     place-self: center;
                }
           }
