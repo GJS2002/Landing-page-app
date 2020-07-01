@@ -16,6 +16,8 @@ body, html {
 
 .text {
   text-align: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
   font-size: .85em;
   padding: .5em;
   line-height: 1.9em;
@@ -39,7 +41,9 @@ body, html {
 @media (min-width: 1000px) {
   .text {
     font-size: 1.2em;
-    place-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     padding: 1em;
     width: 70%;
   }
@@ -192,7 +196,9 @@ body, html {
 @media (min-width: 1000px) {
   .heading h1, .heading2 h1 {
     font-size: 3em;
-    place-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     width: 70%;
   }
 }
@@ -447,7 +453,7 @@ main header img {
   main article {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr);
+    -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -489,7 +495,9 @@ main article .img-2 {
     padding: 1em;
     height: 120%;
     width: 100%;
-    place-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 }
 
